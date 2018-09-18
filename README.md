@@ -1,6 +1,6 @@
 # Gcloud functions params
 
-package for manage params in python gcloud functions
+Package for manage params in Python Gcloud functions
 
 ## Install
 ```requirements.txt
@@ -28,7 +28,7 @@ def main(request):
 
 ## Pubsub function
 
-you can send a json in the event message
+Send a Json in the event message
 
 message: '{"name": "example"}'
 
@@ -36,5 +36,20 @@ message: '{"name": "example"}'
 from gcloud_functions_params import event_to_dict
 
 def main(event, context):
-  params = event_to_dict(event)
+  params = event_to_dict(event, context)
+```
+
+## Error handler
+
+args_or_json_to_dict or event_to_dict return None if some error happen with the Json parse or if not send arguments
+
+```python
+from gcloud_functions_params import args_or_json_to_dict
+
+def main(request):
+  params = args_or_json_to_dict(request)
+  if params:
+    # ...
+  else:
+    raise Exception("Error sending params")
 ```
