@@ -6,5 +6,4 @@ ADD . /app
 
 # docker build -t gcloud-functions-params .
 # docker run -it gcloud-functions-params sh
-# ./build.sh
 # ./deploy.sh
