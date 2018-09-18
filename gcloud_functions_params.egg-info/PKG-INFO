@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: gcloud-functions-params
+Version: 0.0.1
+Summary: package for manage params in python gcloud functions
+Home-page: https://github.com/pypa/sampleproject
+Author: Miguel Savignano
+Author-email: migue.masx@gmail.com
+License: UNKNOWN
+Description: # Gcloud functions params
+        
+        package for manage params in python gcloud functions
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
