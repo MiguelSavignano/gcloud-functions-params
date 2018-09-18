@@ -24,6 +24,7 @@ from gcloud_functions_params import args_or_json_to_dict
 
 def main(request):
   params = args_or_json_to_dict(request)
+  print(str(params))
 ```
 
 ## Pubsub function
@@ -32,11 +33,17 @@ Send a Json in the event message
 
 message: '{"name": "example"}'
 
+Test in Gcloud Function details:
+(message are decode in base64)
+
+{"data": "eyJuYW1lIjogImV4YW1wbGUifQo="}
+
 ```python
 from gcloud_functions_params import event_to_dict
 
 def main(event, context):
   params = event_to_dict(event, context)
+  print(str(params))
 ```
 
 ## Error handler
