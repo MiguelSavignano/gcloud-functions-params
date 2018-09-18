@@ -3,9 +3,11 @@ import setuptools
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
+VERSION = "0.0.2"
+
 setuptools.setup(
     name="gcloud-functions-params",
-    version="0.0.1",
+    version=VERSION,
     author="Miguel Savignano",
     author_email="migue.masx@gmail.com",
     description="package for manage params in python gcloud functions",
