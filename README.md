@@ -4,7 +4,7 @@ package for manage params in python gcloud functions
 
 ## Install
 ```requirements.txt
-gcloud-functions-params==0.0.1
+gcloud-functions-params==0.0.2
 ```
 
 ## Http function
