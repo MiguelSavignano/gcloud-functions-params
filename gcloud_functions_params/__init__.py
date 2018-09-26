@@ -1,8 +1,15 @@
-"""
-Convert flask request arguments or json in dictionary
-"""
 
 def args_or_json_to_dict(request):
+  r"""Convert flask request arguments or json in dictionary
+    Parameters
+    ----------
+    request : FalskRequest
+      Instance of FlaskRequest
+    Returns
+    -------
+    dict : dict
+      return dictionary
+  """
   try:
     if request.args:
       return request.args.to_dict()
