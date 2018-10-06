@@ -65,3 +65,12 @@ def main(request):
 
 ## Module Doc
 [gcloud_functions_params](https://miguelsavignano.github.io/gcloud-functions-params/source/gcloud_functions_params.html#module-gcloud_functions_params)
+
+
+## Test
+```
+pip3 install ostruct
+```
+```
+python3 test.py
+```
