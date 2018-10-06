@@ -7,13 +7,12 @@ from ostruct import OpenStruct
 
 # Mock flask request
 def flask_mock_args(mock_data):
-  mock_args = OpenStruct().to_dict = lambda: mock_data
-  mock = OpenStruct().args = mock_args
-  return mock
+  arguments = OpenStruct({'to_dict': lambda: mock_data})
+  request = OpenStruct({'args': arguments})
+  return request
 
 def flask_mock_json(mock_data):
-  mock = OpenStruct().get_json = lambda: mock_data
-  return mock
+  return OpenStruct({'get_json': lambda: mock_data})
 
 class TestStringMethods(unittest.TestCase):
 
@@ -29,8 +28,13 @@ class TestStringMethods(unittest.TestCase):
         result = gcloud_functions_params.event_to_dict(event, context)
         self.assertEqual(result, None)
 
-    def test_event_to_dict(self):
+    def test_args_to_dict(self):
         flask_request = flask_mock_args({'name': 'example'})
+        result = gcloud_functions_params.args_or_json_to_dict(flask_request)
+        self.assertEqual(result['name'], "example")
+
+    def test_json_to_dict(self):
+        flask_request = flask_mock_json({'name': 'example'})
         result = gcloud_functions_params.args_or_json_to_dict(flask_request)
         self.assertEqual(result['name'], "example")
 
