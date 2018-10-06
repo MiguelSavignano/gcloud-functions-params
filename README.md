@@ -62,3 +62,6 @@ def main(request):
   else:
     raise Exception("Error sending params")
 ```
+
+## Module Doc
+[gcloud_functions_params](https://miguelsavignano.github.io/gcloud-functions-params/source/gcloud_functions_params.html#module-gcloud_functions_params)

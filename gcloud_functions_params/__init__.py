@@ -1,8 +1,10 @@
-"""
-Convert flask request arguments or json in dictionary
-"""
-
 def args_or_json_to_dict(request):
+  """
+  Extract params arguments or json for FlaskRequest
+
+  :param request: FlaskRequest
+  :return: dict
+  """
   try:
     if request.args:
       return request.args.to_dict()
@@ -15,11 +17,14 @@ def args_or_json_to_dict(request):
   except:
     return None
 
-"""
-Convert event to dict
-Decode event message and load json
-"""
 def event_to_dict(event, context):
+  """
+  Extract params decoding in base64 and parse Json for event message
+
+  :param event: {'data'}
+  :param context: Context
+  :return: dict
+  """
   import base64
   import json
   try:
