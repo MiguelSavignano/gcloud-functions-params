@@ -3,6 +3,7 @@
 Package for manage params in Python Gcloud functions
 
 ## Install
+
 ```requirements.txt
 gcloud-functions-params==0.0.2
 ```
@@ -20,6 +21,7 @@ curl http://function-url -H "Content-Type: application/json" -d '{"name": "examp
 ```
 
 The FlaskRequest arguments or json it's parse in dictionary
+
 ```python
 from gcloud_functions_params import args_or_json_to_dict
 
@@ -40,6 +42,7 @@ Test in Gcloud Function details:
 {"data": "eyJtZXNzYWdlIjogImV4YW1wbGUifQo="}
 
 The event it's decode in base64 and parse in dictionary
+
 ```python
 from gcloud_functions_params import event_to_dict
 
@@ -64,13 +67,21 @@ def main(request):
 ```
 
 ## Module Doc
+
 [gcloud_functions_params](https://miguelsavignano.github.io/gcloud-functions-params/source/gcloud_functions_params.html#module-gcloud_functions_params)
 
-
 ## Test
+
 ```
 pip3 install ostruct
 ```
+
 ```
 python3 test.py
+```
+
+or
+
+```
+docker-compose run --rm app
 ```
