@@ -1,0 +1,7 @@
+version: "3"
+services:
+  app:
+    build: .
+    command: python test.py
+    volumes:
+      - "./app"
