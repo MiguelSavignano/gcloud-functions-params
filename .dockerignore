@@ -4,3 +4,4 @@ Dockerfile*
 .gitignore
 .vscode
 python3 -m pip install twine
+__pycache__
